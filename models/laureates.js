@@ -12,10 +12,6 @@ const LaureateSchema = new Schema({
     diedCountrycode: String,
     firstname: String,
     gender: String,
-    userID: { // NOT SURE THIS IS NEEDED
-        type: Schema.Types.ObjectId,
-        required: true
-    },
     prizes: [
         {
             affiliations: [
