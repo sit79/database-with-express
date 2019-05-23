@@ -10,6 +10,7 @@ const indexRouter = require("./routes/index")
 const usersRouter = require("./routes/users")
 
 const app = express()
+const mongoUrl = "mongodb://localhost:27017/laureates"
 
 // view engine setup
 app.set("views", path.join(__dirname, "views"))
@@ -42,7 +43,7 @@ app.use(function(err, req, res, next) {
 
 // mongoose connection
 mongoose
-    .connect("mongodb://localhost:27017/laureates", {
+    .connect(mongoUrl, {
         useNewUrlParser: true
     })
     .then(() => {
