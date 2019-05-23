@@ -35,3 +35,4 @@ const LaureateSchema = new Schema({
 })
 
 const Laureate = mongoose.model("Laureate", LaureateSchema)
+module.exports = Laureate
